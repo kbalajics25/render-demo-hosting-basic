@@ -160,8 +160,7 @@ async function fetchTasks() {
     apiResponse.textContent = 'Loading...';
     
     try {
-        // const response = await fetch('http://localhost:5000/api/tasks');
-        const response = await fetch('https://imprints-task-manager.onrender.com/api/tasks');
+        const response = await fetch('/api/tasks');
         const data = await response.json();
         
         apiResponse.textContent = JSON.stringify(data, null, 2);
