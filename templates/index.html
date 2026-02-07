@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Practice Project</title>
+    <link rel="stylesheet" href="static//styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My Task Manager</h1>
+            <p class="subtitle">A simple project to practice HTML, CSS, and JavaScript</p>
+        </header>
+
+        <main>
+            <div class="add-task-section">
+                <input type="text" id="taskInput" placeholder="Enter a new task..." />
+                <button id="addTaskBtn" onclick="addTask()">Add Task</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalTasks">0</span>
+                    <span class="stat-label">Total Tasks</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="completedTasks">0</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="pendingTasks">0</span>
+                    <span class="stat-label">Pending</span>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <button class="filter-btn active" onclick="filterTasks('all')">All</button>
+                <button class="filter-btn" onclick="filterTasks('pending')">Pending</button>
+                <button class="filter-btn" onclick="filterTasks('completed')">Completed</button>
+            </div>
+
+            <ul id="taskList" class="task-list"></ul>
+
+            <div class="api-section">
+                <h3>Test Python API</h3>
+                <button onclick="fetchTasks()">Fetch Tasks from API</button>
+                <div id="apiResponse"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Practice Project - HTML, CSS, JavaScript & Python</p>
+        </footer>
+    </div>
+
+    <script src="static//script.js"></script>
+</body>
+</html>
